@@ -29,7 +29,6 @@ fn test_scan_tokens() {
         Token::new(TokenType::If, "if".to_string(), 2),
         Token::new(TokenType::Else, "else".to_string(), 2),
         Token::new(TokenType::Identifier, "ident".to_string(), 2),
-        Token::new(TokenType::Return, "return".to_string(), 2),
         Token::new(TokenType::EOF, "\0".to_string(), 4),
     ];
 

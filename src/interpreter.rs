@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use crate::{environment::Environment, parser::{Expr, Stmt}, token::{Token, TokenType}, Lox};
 
 pub struct Interpreter {
@@ -75,7 +73,6 @@ impl Interpreter {
 
                 Some(())
             }
-            _ => todo!()
         }
     }
 
@@ -158,7 +155,7 @@ impl Interpreter {
                 }
 
                 return Some(res.unwrap());
-            }
+            },
         }
     }
 

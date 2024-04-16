@@ -84,9 +84,6 @@ impl Lox {
         if self.extract_ast && self.target_file.is_some() {
             let target_file = self.target_file.as_ref().unwrap();
             let mut file = fs::File::create(target_file).unwrap();
-            // for stmt in &expr {
-            //     file.write_all(format!("{stmt}\n").as_bytes()).unwrap();
-            // }
             file.write_all(format!("{:#?}", expr.clone()).as_bytes()).unwrap();
 
         }

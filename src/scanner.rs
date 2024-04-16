@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use std::collections::HashMap;
 
 use crate::{token::{
@@ -22,13 +20,11 @@ impl Scanner {
         keywords.insert("while".to_string(), TokenType::While);
         keywords.insert("var".to_string(), TokenType::Var);
         keywords.insert("true".to_string(), TokenType::True);
-        keywords.insert("return".to_string(), TokenType::Return);
         keywords.insert("print".to_string(), TokenType::Print);
         keywords.insert("or".to_string(), TokenType::Or);
         keywords.insert("nil".to_string(), TokenType::Nil);
         keywords.insert("if".to_string(), TokenType::If);
         keywords.insert("for".to_string(), TokenType::For);
-        keywords.insert("fun".to_string(), TokenType::Fun);
         keywords.insert("false".to_string(), TokenType::False);
         keywords.insert("else".to_string(), TokenType::Else);
 

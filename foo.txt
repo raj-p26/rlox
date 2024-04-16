@@ -61,3 +61,17 @@ print "printing for loop";
 for (var i = 1; i <= 10; i = i+1) {
     print i;
 }
+
+var n1 = 0;
+var n2 = 1;
+var n3 = 1;
+// fibonacci program using for or while loop
+print "printing fibonacci";
+print n1;
+print n2;
+for (var i = 2; i < 40; i = i + 1) {
+    n3 = n1 + n2;
+    print n3;
+    n1 = n2;
+    n2 = n3;
+}

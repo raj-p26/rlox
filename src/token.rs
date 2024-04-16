@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 #[derive(Debug, Clone, Copy, Eq, PartialEq)]
 pub enum TokenType {
     // Single Character tokens.
@@ -17,8 +15,8 @@ pub enum TokenType {
     Identifier, String, Number,
 
     // Keywords.
-    And, Else, False, Fun, For, If, Nil, Or,
-    Print, Return, True, Var, While,
+    And, Else, False, For, If, Nil, Or,
+    Print, True, Var, While,
 
     EOF
 }
@@ -33,9 +31,5 @@ pub struct Token {
 impl Token {
     pub fn new(token_type: TokenType, lexeme: String, line: usize) -> Self {
         Token { token_type, lexeme, line }
-    }
-
-    pub fn to_string(&self) -> String {
-        format!("{:?} {}", self.token_type, self.lexeme)
     }
 }

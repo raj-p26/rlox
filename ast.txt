@@ -1,0 +1,155 @@
+[
+    Let(
+        Token {
+            token_type: Identifier,
+            lexeme: "i",
+            line: 52,
+        },
+        Some(
+            Literal(
+                "1",
+            ),
+        ),
+    ),
+    While(
+        Binary(
+            Variable(
+                Token {
+                    token_type: Identifier,
+                    lexeme: "i",
+                    line: 55,
+                },
+            ),
+            Token {
+                token_type: Less,
+                lexeme: "<",
+                line: 55,
+            },
+            Literal(
+                "10",
+            ),
+        ),
+        Block(
+            [
+                Print(
+                    Variable(
+                        Token {
+                            token_type: Identifier,
+                            lexeme: "i",
+                            line: 56,
+                        },
+                    ),
+                ),
+                Expression(
+                    Assign(
+                        Token {
+                            token_type: Identifier,
+                            lexeme: "i",
+                            line: 57,
+                        },
+                        Binary(
+                            Variable(
+                                Token {
+                                    token_type: Identifier,
+                                    lexeme: "i",
+                                    line: 57,
+                                },
+                            ),
+                            Token {
+                                token_type: Plus,
+                                lexeme: "+",
+                                line: 57,
+                            },
+                            Literal(
+                                "1",
+                            ),
+                        ),
+                    ),
+                ),
+            ],
+        ),
+    ),
+    Print(
+        Literal(
+            "printing for loop",
+        ),
+    ),
+    Block(
+        [
+            Let(
+                Token {
+                    token_type: Identifier,
+                    lexeme: "i",
+                    line: 61,
+                },
+                Some(
+                    Literal(
+                        "1",
+                    ),
+                ),
+            ),
+            While(
+                Binary(
+                    Variable(
+                        Token {
+                            token_type: Identifier,
+                            lexeme: "i",
+                            line: 61,
+                        },
+                    ),
+                    Token {
+                        token_type: LessEqual,
+                        lexeme: "<=",
+                        line: 61,
+                    },
+                    Literal(
+                        "10",
+                    ),
+                ),
+                Block(
+                    [
+                        Block(
+                            [
+                                Print(
+                                    Variable(
+                                        Token {
+                                            token_type: Identifier,
+                                            lexeme: "i",
+                                            line: 62,
+                                        },
+                                    ),
+                                ),
+                            ],
+                        ),
+                        Expression(
+                            Assign(
+                                Token {
+                                    token_type: Identifier,
+                                    lexeme: "i",
+                                    line: 61,
+                                },
+                                Binary(
+                                    Variable(
+                                        Token {
+                                            token_type: Identifier,
+                                            lexeme: "i",
+                                            line: 61,
+                                        },
+                                    ),
+                                    Token {
+                                        token_type: Plus,
+                                        lexeme: "+",
+                                        line: 61,
+                                    },
+                                    Literal(
+                                        "1",
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ],
+                ),
+            ),
+        ],
+    ),
+]

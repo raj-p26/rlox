@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use std::collections::HashMap;
 
 use crate::{token::Token, Lox};
@@ -36,7 +34,7 @@ impl Environment {
         }
 
         if self.enclosing.is_some() {
-            let mut enclosing = self.enclosing.as_mut().unwrap();
+            let enclosing = self.enclosing.as_mut().unwrap();
             let val = enclosing.get(name.clone());
             if let Some(val) = val {
                 return Some(val);

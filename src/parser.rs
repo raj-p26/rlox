@@ -43,12 +43,7 @@ impl fmt::Display for Expr {
             Expr::Assign(name, expr) => {
                 write!(f, "({} = {})", name.lexeme, *expr)
             },
-            #[allow(unused)]
-            Expr::Logical(left, op, right) => {
-                write!(f, "({}", *left).unwrap();
-                write!(f, " {} ", op.lexeme).unwrap();
-                write!(f, "{})", *right)
-            }
+            _ => todo!()
         }
     }
 }
@@ -95,9 +90,7 @@ impl fmt::Display for Stmt {
                 }
                 write!(f, "\n}}")
             },
-            Stmt::While(_, _) => {
-                todo!()
-            }
+            _ => todo!()
         }
     }
 }
@@ -120,6 +113,9 @@ impl Parser {
     }
 
     fn declaration(&mut self) -> Option<Stmt> {
+        // if self.match_tokens(&[TokenType::Fun]) {
+        //     return self.function("function");
+        // }
         if self.match_tokens(&[TokenType::Var]) {
             return self.var_declaration();
         }
@@ -329,7 +325,6 @@ impl Parser {
     }
 
     fn expression(&mut self) -> Option<Expr> {
-        // self.ternary()
         self.assignment()
     }
 
@@ -373,7 +368,6 @@ impl Parser {
 
             expr = Expr::Logical(Box::new(expr), operator, Box::new(right));
         }
-        // dbg!(&expr);
 
         return Some(expr);
     }
@@ -594,13 +588,13 @@ impl Parser {
             }
 
             match self.peek().token_type {
-                TokenType::Fun
-                | TokenType::Var
+                // TokenType::Fun
+                TokenType::Var
                 | TokenType::For
                 | TokenType::If
                 | TokenType::While
-                | TokenType::Print
-                | TokenType::Return => return,
+                | TokenType::Print => return,
+                // | TokenType::Return => return,
                 _ => self.advance(),
             };
         }
