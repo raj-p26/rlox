@@ -1,0 +1,63 @@
+// var x = 10;
+// var y = 20;
+// var foo;
+//
+// print "x + y --> " + (x + y);
+//
+// print "foo --> " + foo;
+//
+// x = 45;
+// 10 + 12;
+// print x;
+//
+// print x + " --> x";
+// var a = "global a";
+// var b = "global b";
+// var c = "global c";
+// {
+//     var a = "outer a";
+//     var b = "outer b";
+//     {
+//         var a = "inner a";
+//         print a;
+//         print b;
+//         print c;
+//     }
+//     print a;
+//     print b;
+//     print c;
+// }
+// print a;
+// print b;
+// print c;
+//
+// {
+//     var inner_var = "some inner var"
+//     print inner_var;
+// }
+//
+// if (10 == 10) {
+//     print "value is true";
+//     foo = 45;
+//     foo = foo + 45;
+//     print foo;
+// } else {
+//     print "value if false";
+// }
+// print foo;
+//
+// print "yes" or 2;
+// print nil or 2;
+
+var i = 1;
+
+
+while (i < 10) {
+    print i;
+    i = i + 1;
+}
+
+print "printing for loop";
+for (var i = 1; i <= 10; i = i+1) {
+    print i;
+}
