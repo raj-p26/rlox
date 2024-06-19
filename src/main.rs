@@ -112,6 +112,8 @@ fn main() {
         eprintln!("Usage: lox [script]");
         std::process::exit(64);
     } else if args.len() == 4 {
+        // Weak arguments check.
+        // TODO: check for the `--extract-ast` flag.
         lox.extract_ast = true;
         lox.target_file = Some(args[3].clone());
         lox.run_file(args[1].clone());
